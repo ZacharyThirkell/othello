@@ -1,0 +1,31 @@
+Othello Algorithms
+
+'Graham' algorithm:
+""" a one-move greedy algorithm that maximises score """
+
+initial_score = O.score()
+
+best_moves_so_far = []
+
+RUN for each legal move:
+    move_score = O.score()
+    delta_w = move_score[0] - inital_score[0]
+    delta_b = move_score[1] - inital_score[1]
+    net_change = delta_w - delta_b
+    for saved move, change in best_moves_so_far:
+        if net_change < change:
+            best_moves_so_far = [(current_move, net_change)]
+        else:
+            best_moves_so_far.append((current_move, net_change))
+
+return random.choice(best_moves_so_far[moves])
+
+'Randall' algorithm:
+""" a basic random algorithm """
+
+legal_moves = []
+
+RUN for each legal move:
+    legal_moves.append(legal_move)
+
+return random.choice(legal_moves)
