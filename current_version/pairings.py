@@ -16,13 +16,18 @@ def two_player_game():
     complete_flag = False
     while not O.is_complete(complete_flag):
         n_passes = human(O, 'black', n_passes, True)
-        if n_passes == 0:
+        if n_passes == None:
+            break
+        elif n_passes == 0:
             complete_flag = True
         if not O.is_complete(complete_flag):
             n_passes = human(O, 'white', n_passes, True)
-            if n_passes == 0:
+            if n_passes == None:
+                break
+            elif n_passes == 0:
                 complete_flag = True
-    O.finish_print('U', 'U')
+    if O.is_complete(complete_flag):
+        O.finish_print('U', 'U')
     
 def play_Randall_black():
     """ run a game of Othello vs Randall in the python shell with the black 
@@ -36,13 +41,18 @@ def play_Randall_black():
     complete_flag = False
     while not O.is_complete(complete_flag):
         n_passes = human(O, 'black', n_passes, False)
-        if n_passes == 0:
+        if n_passes == None:
+            break
+        elif n_passes == 0:
             complete_flag = True
         if not O.is_complete(complete_flag):
             n_passes = Randall(O, 'white', n_passes)
-            if n_passes == 0:
+            if n_passes == None:
+                break
+            elif n_passes == 0:
                 complete_flag = True
-    O.finish_print('u', 'R')
+    if O.is_complete(complete_flag):
+        O.finish_print('u', 'R')
 
 def play_Randall_white():
     """ run a game of Othello vs Randall in the python shell with the white 
@@ -56,13 +66,18 @@ def play_Randall_white():
     complete_flag = False
     while not O.is_complete(complete_flag):
         n_passes = Randall(O, 'black', n_passes)
-        if n_passes == 0:
+        if n_passes == None:
+            break
+        elif n_passes == 0:
             complete_flag = True
         if not O.is_complete(complete_flag):
             n_passes = human(O, 'white', n_passes, False)
-            if n_passes == 0:
+            if n_passes == None:
+                break
+            elif n_passes == 0:
                 complete_flag = True
-    O.finish_print('R', 'u')
+    if O.is_complete(complete_flag):
+        O.finish_print('R', 'u')
 
 def play_Graham_black():
     """ run a game of Othello vs Graham in the python shell with the black 
@@ -76,13 +91,18 @@ def play_Graham_black():
     complete_flag = False
     while not O.is_complete(complete_flag):
         n_passes = human(O, 'black', n_passes, False)
-        if n_passes == 0:
+        if n_passes == None:
+            break
+        elif n_passes == 0:
             complete_flag = True
         if not O.is_complete(complete_flag):
             n_passes = Graham(O, 'white', n_passes)
-            if n_passes == 0:
+            if n_passes == None:
+                break
+            elif n_passes == 0:
                 complete_flag = True
-    O.finish_print('u', 'G')
+    if O.is_complete(complete_flag):
+        O.finish_print('u', 'G')
 
 def play_Graham_white():
     """ run a game of Othello vs Graham in the python shell with the white
@@ -96,13 +116,18 @@ def play_Graham_white():
     complete_flag = False
     while not O.is_complete(complete_flag):
         n_passes = Graham(O, 'black', n_passes)
-        if n_passes == 0:
+        if n_passes == None:
+            break
+        elif n_passes == 0:
             complete_flag = True
         if not O.is_complete(complete_flag):
             n_passes = human(O, 'white', n_passes, False)
-            if n_passes == 0:
+            if n_passes == None:
+                break
+            elif n_passes == 0:
                 complete_flag = True
-    O.finish_print('G', 'u')
+    if O.is_complete(complete_flag):
+        O.finish_print('G', 'u')
 
 def play_Edgar_black():
     """ run a game of Othello vs Edgar in the python shell with the black
@@ -116,13 +141,18 @@ def play_Edgar_black():
     complete_flag = False
     while not O.is_complete(complete_flag):
         n_passes = human(O, 'black', n_passes, False)
-        if n_passes == 0:
+        if n_passes == None:
+            break
+        elif n_passes == 0:
             complete_flag = True
         if not O.is_complete(complete_flag):
             n_passes = Edgar(O, 'white', n_passes)
-            if n_passes == 0:
+            if n_passes == None:
+                break
+            elif n_passes == 0:
                 complete_flag = True
-    O.finish_print('u', 'E')
+    if O.is_complete(complete_flag):
+        O.finish_print('u', 'E')
     
 def play_Edgar_white():
     """ run a game of Othello vs Edgar in the python shell with the white
@@ -136,13 +166,18 @@ def play_Edgar_white():
     complete_flag = False
     while not O.is_complete(complete_flag):
         n_passes = Edgar(O, 'black', n_passes)
-        if n_passes == 0:
+        if n_passes == None:
+            break
+        elif n_passes == 0:
             complete_flag = True
         if not O.is_complete(complete_flag):
             n_passes = human(O, 'white', n_passes, False)
-            if n_passes == 0:
+            if n_passes == None:
+                break
+            elif n_passes == 0:
                 complete_flag = True
-    O.finish_print('E', 'u')
+    if O.is_complete(complete_flag):
+        O.finish_print('E', 'u')
 
 def Randall_vs_Graham():
     """ run a game of Othello between Randall and Graham in the python shell """

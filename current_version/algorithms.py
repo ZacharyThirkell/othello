@@ -19,7 +19,10 @@ def human(O, colour, n_passes, u_flag):
                 b = input("Black to move: ")
             else:
                 b = input("White to move: ")
-        if b != 'p':
+        if b == 'q':
+            n_passes = None
+            break
+        elif b != 'p':
             if colour == 'black':
                 current_position = black_move(O, O.board, b)
             else:

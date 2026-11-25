@@ -97,7 +97,7 @@ class Othello:
     
     def __str__(self):
         """ game representation """
-        s = '   - - - - - - - -  \n'
+        s = '   _______________  \n'
         for i in range(len(self.board)):
             s += f'{8 - i}| '
             for j in range(len(self.board[i])):
@@ -107,7 +107,7 @@ class Othello:
                     s += str(self.board[i][j])
                 s += ' '
             s += '|\n'
-        s += '   - - - - - - - -  \n'
+        s += '   ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾  \n'
         s += '   a b c d e f g h  '
         return s    
         
